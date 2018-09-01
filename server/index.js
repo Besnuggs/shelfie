@@ -14,8 +14,8 @@ massive(process.env.DB_CONNECTION)
     app.listen(PORT, ()=> console.log(`listening on port ${PORT}`))
   })
 
-  app.get('/api/inventory', ctrl.getProduct)
-  app.post('/api/inventory', ctrl.addProduct);
+  app.get('/api/inventory/', ctrl.getProduct)
+  app.post('/api/product/', ctrl.addProduct);
   app.put('/api/inventory/:id', ctrl.updateProduct);
   app.delete('/api/inventory/:id', ctrl.deleteProduct);
 

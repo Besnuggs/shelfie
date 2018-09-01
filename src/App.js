@@ -20,11 +20,10 @@ constructor(props){
 
 componentDidMount(){
   axios.get('/api/inventory/').then((res)=>{
+    console.log(res)
     this.setState({InventoryList: res.data})
-    console.log(this.state)
   })
 }
-
 
 // addToInv(product_name, product_price, product_image){
 //     axios.post('/api/products', {
@@ -37,6 +36,7 @@ componentDidMount(){
 
 
   render(props) {
+    console.log(this.state)
     return (
       <div className="App">
       <Dashboard
