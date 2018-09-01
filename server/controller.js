@@ -21,7 +21,5 @@ updateProduct: (req,res,then) =>{
 },
 deleteProduct: (req,res,then) => {
     const db = req.app.get('db');
-
-
 }
 }
