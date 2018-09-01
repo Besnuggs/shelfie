@@ -4,9 +4,11 @@ const Product = (props) => {
 
     return(
         <div>
-            {/* {this.props.Inventory[0]}
-            {this.props.Inventory[0].Price}
-            <img src={this.props.Inventory.Image}/> */}
+            <p>Product</p>
+            
+            <h1>{props.price} </h1>
+            <h1>{props.price}</h1>
+
         </div>
     )
 }

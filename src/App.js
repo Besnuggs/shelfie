@@ -12,8 +12,14 @@ constructor(props){
     this.state={
       InventoryList:[
         {Name: 'What',
-        Price: 0,
-        Image: ''}
+        Price: 4,
+        Image: 'okay'},
+        {Name: 'Why',
+        Price: 3,
+        Image: 'notbad'},
+        {Name: 'Who',
+        Price: 2,
+        Image: 'better'}
       ]
     }
 }
@@ -25,14 +31,14 @@ componentDidMount(){
 }
 
 
-addToInv(product_name, product_price, product_image){
-    axios.post('/api/products', {
-      product_name: product_name,
-      product_price: product_price,
-      product_image: product_image
-    })
-      .then((res) => this.setState({InventoryList: res.data}))
-  }
+// addToInv(product_name, product_price, product_image){
+//     axios.post('/api/products', {
+//       product_name: product_name,
+//       product_price: product_price,
+//       product_image: product_image
+//     })
+//       .then((res) => this.setState({InventoryList: res.data}))
+//   }
 
 
   render(props) {
@@ -41,10 +47,10 @@ addToInv(product_name, product_price, product_image){
       <Dashboard
         InventoryList={this.state.InventoryList}/>
       <Form
-      Get={this.componentDidMount}
+        Get={this.componentDidMount}
       />
       <Header/>
-      {/* <Product/> */}
+      <Product/>
 
       
       </div>

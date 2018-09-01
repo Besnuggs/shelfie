@@ -9,19 +9,14 @@ class Dashboard extends Component{
 
 
 render(props){
-// Make sure props is working.
-// let {Name, Price, Image} = this.props.InventoryList
-let Inventory = this.props.InventoryList.map((Name, Price, Image) => {
-    return(
-       <h1> Name: {Name} </h1>
-    )
-});
-console.log(Inventory)
+let product = []
+product.push(this.props.InventoryList);
+console.log(product)
 console.log(this.props.InventoryList)
     return(
         <div>
             <Product 
-            Inventory={Inventory}/>
+               product={this.product} />
         </div>
     )
 }
