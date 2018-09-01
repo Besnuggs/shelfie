@@ -11,15 +11,9 @@ constructor(props){
   super(props)
     this.state={
       InventoryList:[
-        {Name: 'What',
-        Price: 4,
-        Image: 'okay'},
-        {Name: 'Why',
-        Price: 3,
-        Image: 'notbad'},
-        {Name: 'Who',
-        Price: 2,
-        Image: 'better'}
+        {Name: '',
+        Price: 0,
+        Image: ''}
       ]
     }
 }
@@ -27,6 +21,7 @@ constructor(props){
 componentDidMount(){
   axios.get('/api/inventory/').then((res)=>{
     this.setState({InventoryList: res.data})
+    console.log(this.state)
   })
 }
 

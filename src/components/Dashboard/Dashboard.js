@@ -11,12 +11,18 @@ class Dashboard extends Component{
 render(props){
 let product = []
 product.push(this.props.InventoryList);
-console.log(product)
-console.log(this.props.InventoryList)
+let productName = product[0][0].Name
+let productPrice = product[0][0].Price
+let productImage = product[0][0].Image
+
+
     return(
         <div>
             <Product 
-               product={this.product} />
+               productName={productName} 
+               productPrice={productPrice}
+               productImage={productImage}
+               />
         </div>
     )
 }

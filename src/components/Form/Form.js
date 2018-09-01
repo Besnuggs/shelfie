@@ -27,7 +27,7 @@ this.setState({product_image: 'https://upload.wikimedia.org/wikipedia/commons/a/
 
 handleAddClick(){
 axios.post('/api/inventory/', {Name: this.state.product_name},{Price: this.state.product_price}, {Image: this.state.product_image}).then((res)=> {
-    this.props.Get()
+    this.props.Get(res)
     this.handleCancelClick()
 })
 
